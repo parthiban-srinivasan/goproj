@@ -18,11 +18,11 @@ type countResponse struct {
 }
 
 func makeCountEndpoint(srv StringService) endpoint.Endpoint {
-         return func(ctx context.Context, request interface{}) (interface{}, error) {
-                  req := request.(countRequest)
-                  v   := srv.Count(req.Str)
-                  return countResponse{v}, nil
-         }
+	return func(ctx context.Context, request interface{}) (interface{}, error) {
+		req := request.(countRequest)
+		v := srv.Count(req.Str)
+		return countResponse{v}, nil
+	}
 }
 
 func decodeCountRequest(r *http.Request) (interface{}, error) {

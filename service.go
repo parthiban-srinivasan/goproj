@@ -1,27 +1,27 @@
 package main
 
 import (
-         "errors"
+//       "errors"
 //       "strings"
 )
 
 type StringService interface {
-//       Uppercase(string) (string, error)
-         Count(string) int
+	//       Uppercase(string) (string, error)
+	Count(string) int
 }
 
 type stringService struct{}
 
 /* func (stringService) Uppercase(inStr string) (string, error) {
          if inStr == "" {
-                 return "", ErrEmpty         
+                 return "", ErrEmpty
          }
          return strings.ToUpper(inStr), nil
-} 
+}
 */
 
 func (stringService) Count(inStr string) int {
-         return len(inStr)
+	return len(inStr)
 }
 
 //var ErrEmpty = errors.New("Empty String")

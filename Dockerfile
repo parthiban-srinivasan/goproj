@@ -1,8 +1,8 @@
 FROM scratch
 MAINTAINER  Parthiban Srinivasan <parthiban.srinivasan@gmail.com> 
 
-ADD  miservice miservice
+ADD  testmicro testmicro
 
-ENTRYPOINT ["/miservice"]
+ENTRYPOINT ["/testmicro"]
 
 EXPOSE 8080
