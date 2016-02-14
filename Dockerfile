@@ -1,10 +1,8 @@
-FROM golang:onbuild
-Maintainer  Parthiban Srinivasan 
+FROM scratch
+MAINTAINER  Parthiban Srinivasan <parthiban.srinivasan@gmail.com> 
 
-ADD  .  /gopath/src/github.com/parthiban-srinivasan/goproj
+ADD  miservice miservice
 
-RUN go install github.com/parthiban-srinivasan/goproj
-
-ENTRYPOINT /gopath/bin/
+ENTRYPOINT ["/miservice"]
 
 EXPOSE 8080
